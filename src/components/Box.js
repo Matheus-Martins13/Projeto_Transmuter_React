@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Result from './Result';
+import styles from './Content.module.css';
 
 function Form() {
 
@@ -13,12 +14,13 @@ function Form() {
   }
 
   return (
-    <div>
+    <div className={styles.background}>
       <form onSubmit={formatText}>
       <textarea 
       onChange={(e) => setText(e.target.value)}
       rows="4" cols="50"
       placeholder="Escreva seu texto"
+      className={styles.textArea}
       />
       <br/>
       <button type="submit">Converter</button>
