@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import Box from './Box';
 import Result from './Result';
+import Buttons from './Buttons';
 
 function Main() {
   const [text, setText] = useState('');
@@ -11,15 +12,10 @@ function Main() {
     <section>
         <Box setText={setText}/>
 
-        <button
-          onClick={(e) => setFormatedText(text.toUpperCase())}
-          value="maiuscula"
-        >Maúscula</button>
-        
-        <button
-          onClick={(e) => setFormatedText(text.toLowerCase())}
-          value="maiuscula"
-        >Minúscula</button>
+        <Buttons
+          setFormatedText={setFormatedText}
+          text={text}
+        />
 
         <Result 
         formatedText={formatedText}
