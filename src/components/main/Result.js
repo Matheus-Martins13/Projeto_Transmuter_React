@@ -1,4 +1,3 @@
-import styles from './Content.module.css';
 
 function Result(props) {
 
@@ -7,7 +6,6 @@ function Result(props) {
       <h3>Seu resultado:</h3>
       <textarea
         rows="4" cols="50"
-        className={styles.textArea}
         value={props.formatedText}
       />
       <br />
