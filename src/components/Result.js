@@ -1,18 +1,20 @@
 import styles from './Content.module.css';
 
-function Result({ text }) {
+function Result(props) {
 
   return (
     <>
-      <br/>
       <h3>Seu resultado:</h3>
-      <textarea 
-      rows="4" cols="50"
-      className={styles.textArea}
-      value={text}
+      <textarea
+        rows="4" cols="50"
+        className={styles.textArea}
+        value={props.formatedText}
       />
-    </>
+      <br />
 
+      <button onClick={(e) => props.setFormatedText('')}>Limpar</button>
+
+    </>
   );
 }
 

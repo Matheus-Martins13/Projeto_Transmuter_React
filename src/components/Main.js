@@ -1,18 +1,31 @@
 import { useState } from 'react';
-import Result from './Result';
+
 import Box from './Box';
-import Button from './Button';
+import Result from './Result';
 
 function Main() {
   const [text, setText] = useState('');
+  const [formatedText, setFormatedText] = useState('');
+  
   return (
     <section>
-      <Box setText={setText} />
-      <Button name='Maiuscula' option='#'/>
-      <Button name='Minuscula' option='#'/>
-      <Button name='Primeira maiuscula' option='#'/>
-      <Button name='Maiuscula' option='#'/>
-      <Result text={text} />
+        <Box setText={setText}/>
+
+        <button
+          onClick={(e) => setFormatedText(text.toUpperCase())}
+          value="maiuscula"
+        >Maúscula</button>
+        
+        <button
+          onClick={(e) => setFormatedText(text.toLowerCase())}
+          value="maiuscula"
+        >Minúscula</button>
+
+        <Result 
+        formatedText={formatedText}
+        setFormatedText={setFormatedText}
+        />
+
     </section>
   );
 }
