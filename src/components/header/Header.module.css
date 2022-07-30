@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#header {
+  background-color: rgba(0, 0, 0, 0.843);
+  padding: 10px;
+}
+
+.title {
+  text-decoration: none;
+  color: rgb(215, 148, 6);
+  font-family: 'Press Start 2P', cursive;
+}
