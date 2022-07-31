@@ -1,15 +1,20 @@
-function Buttons(props) {
+import titleize from "./utils/titleize";
+
+function Buttons(props) { 
+
   return (
     <>
       <button
         onClick={(e) => props.setFormatedText(props.text.toUpperCase())}
-        value="maiuscula"
       >Maúscula</button>
 
       <button
         onClick={(e) => props.setFormatedText(props.text.toLowerCase())}
-        value="maiuscula"
       >Minúscula</button>
+
+      <button
+        onClick={(e) => props.setFormatedText(titleize(props.text))}
+      >Primeiras letras maiúsculas</button>
     </>
   );
 }
